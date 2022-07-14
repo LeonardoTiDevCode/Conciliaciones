@@ -1,83 +1,53 @@
-<nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
-    <div class="position-sticky pt-3">
-      <ul class="nav flex-column">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page"  [routerLink]="['home']" routerLinkActive="active"
-          >
-            <span data-feather="home"></span>
-            Home
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page"  [routerLink]="['dashboard']" routerLinkActive="active"
-          >
-            <span data-feather="dashboard"></span>
-            Dashboard
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">
-            <span data-feather="file"></span>
-            Orders
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">
-            <span data-feather="shopping-cart"></span>
-            Products
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">
-            <span data-feather="users"></span>
-            Customers
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">
-            <span data-feather="bar-chart-2"></span>
-            Reports
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">
-            <span data-feather="layers"></span>
-            Integrations
-          </a>
-        </li>
-      </ul>
+<div
+  class="d-flex flex-column flex-shrink-0 p-3 bg-white vh-100"
+  style="width: 300px"
+>
+  <div class="container text-center">
+    <img
+      src="{{ logoTotalPanel }}"
+      alt=""
+      width="145"
+      height="30"
+      style="margin-top: 36px; opacity: 1; float: right;"
+    />
+  </div>
+  <div class="container mt-5" style="margin-left: 25px;">
+    <div class="row">
+      <div class="col-md-2" style="margin-top: 35px !important">
+        <span>
+          <i
+            class="fa-solid fa-calendar mx-auto d-block"
+            style="font-size: 23px; color: #9a9cba"
+          ></i>
+        </span>
+      </div>
+      <div class="col-md-10 p-0">
+        <div class="select-box m-4">
+          <div class="options-container">
+            <div class="option">
+              <input
+                type="radio"
+                class="radio"
+                id="automobiles"
+                name="category"
+              />
+              <label for="automobiles">Ver por mes</label>
+            </div>
 
-      <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-        <span>Saved reports</span>
-        <a class="link-secondary" href="#" aria-label="Add a new report">
-          <span data-feather="plus-circle"></span>
-        </a>
-      </h6>
-      <ul class="nav flex-column mb-2">
-        <li class="nav-item">
-          <a class="nav-link" href="#">
-            <span data-feather="file-text"></span>
-            Current month
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">
-            <span data-feather="file-text"></span>
-            Last quarter
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">
-            <span data-feather="file-text"></span>
-            Social engagement
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">
-            <span data-feather="file-text"></span>
-            Year-end sale
-          </a>
-        </li>
-      </ul>
+            <div class="option">
+              <input type="radio" class="radio" id="film" name="category" />
+              <label for="film">Ver por semana</label>
+            </div>
+
+            <div class="option">
+              <input type="radio" class="radio" id="science" name="category" />
+              <label for="science">Ver por día</label>
+            </div>
+          </div>
+
+          <div class="selected">Ver por mes</div>
+        </div>
+      </div>
     </div>
-  </nav>
+  </div>
+</div>
