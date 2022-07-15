@@ -11,7 +11,7 @@
 
 .select-box {
     display: flex;
-    width: 260px;
+    width: 220px;
     flex-direction: column;
 }
 

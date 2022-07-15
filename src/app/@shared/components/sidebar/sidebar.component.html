@@ -1,53 +1,57 @@
-<div
-  class="d-flex flex-column flex-shrink-0 p-3 bg-white vh-100"
-  style="width: 300px"
->
-  <div class="container text-center">
-    <img
-      src="{{ logoTotalPanel }}"
-      alt=""
-      width="145"
-      height="30"
-      style="margin-top: 36px; opacity: 1; float: right;"
-    />
-  </div>
-  <div class="container mt-5" style="margin-left: 25px;">
-    <div class="row">
-      <div class="col-md-2" style="margin-top: 35px !important">
-        <span>
-          <i
-            class="fa-solid fa-calendar mx-auto d-block"
-            style="font-size: 23px; color: #9a9cba"
-          ></i>
-        </span>
-      </div>
-      <div class="col-md-10 p-0">
-        <div class="select-box m-4">
-          <div class="options-container">
-            <div class="option">
-              <input
-                type="radio"
-                class="radio"
-                id="automobiles"
-                name="category"
-              />
-              <label for="automobiles">Ver por mes</label>
+<nav style="width: 390px">
+  <div class="d-flex flex-column flex-shrink-0 p-3 bg-white vh-100">
+    <div class="container text-center">
+      <img
+        src="{{ logoTotalPanel }}"
+        alt=""
+        width="145"
+        height="30"
+        style="margin-top: 36px; opacity: 1"
+      />
+    </div>
+    <div class="container mt-5" style="margin-left: 25px">
+      <div class="row">
+        <div class="col-md-2" style="margin-top: 35px !important">
+          <span>
+            <i
+              class="fa-solid fa-calendar mx-auto d-block"
+              style="font-size: 23px; color: #9a9cba"
+            ></i>
+          </span>
+        </div>
+        <div class="col-md-10 p-0">
+          <div class="select-box m-4">
+            <div class="options-container">
+              <div class="option">
+                <input
+                  type="radio"
+                  class="radio"
+                  id="automobiles"
+                  name="category"
+                />
+                <label for="automobiles">Ver por mes</label>
+              </div>
+
+              <div class="option">
+                <input type="radio" class="radio" id="film" name="category" />
+                <label for="film">Ver por semana</label>
+              </div>
+
+              <div class="option">
+                <input
+                  type="radio"
+                  class="radio"
+                  id="science"
+                  name="category"
+                />
+                <label for="science">Ver por día</label>
+              </div>
             </div>
 
-            <div class="option">
-              <input type="radio" class="radio" id="film" name="category" />
-              <label for="film">Ver por semana</label>
-            </div>
-
-            <div class="option">
-              <input type="radio" class="radio" id="science" name="category" />
-              <label for="science">Ver por día</label>
-            </div>
+            <div class="selected">Ver por mes</div>
           </div>
-
-          <div class="selected">Ver por mes</div>
         </div>
       </div>
     </div>
   </div>
-</div>
+</nav>
