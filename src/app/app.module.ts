@@ -11,7 +11,7 @@ import { ContentComponent } from './@shared/components/content/content.component
 import { HomeComponent } from './pages/panel/home/home.component';
 import { DashboardComponent } from './pages/panel/dashboard/dashboard.component';
 import { PanelComponent } from './pages/panel/panel.component';
-
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -27,7 +27,8 @@ import { PanelComponent } from './pages/panel/panel.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
