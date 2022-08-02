@@ -29,20 +29,28 @@
               <td>{{ c.noCliente }}</td>
               <td>{{ c.noTarjeta }}</td>
               <td *ngIf="c.estatus == 'Sin diferencia'">
-                <span class="badge bg-success">{{ c.estatus }}</span>
+                <span class="badge bg-low">{{ c.estatus }}</span>
               </td>
               <td *ngIf="c.estatus == 'Con diferencia'">
-                <span class="badge bg-danger">{{ c.estatus }}</span>
+                <span class="badge bg-high">{{ c.estatus }}</span>
               </td>
               <td>
-                <button type="button" class="btn btn-primary btn-sm">
-                  Primary
+                <button
+                  type="button"
+                  class="btn btn-primary btn-sm"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modal-comparacion"
+                  style="background-color: #6d3dff; border: none; border-radius: 8px;"
+                >
+                  <i class="fa-solid fa-eye"></i>
+
+                  Ver conciliación
                 </button>
                 <button
                   type="button"
                   class="btn btn-secondary btn-sm"
                   style="margin-left: 15px"
-                  onClick="getData(c.noCliente)"
+                  (click)="getData(c.noCliente)"
                 >
                   Secondary
                 </button>
@@ -50,6 +58,78 @@
             </tr>
           </tbody>
         </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="modal-comparacion"
+  data-bs-backdrop="static"
+  data-bs-keyboard="false"
+  tabindex="-1"
+  aria-labelledby="staticBackdropLabel"
+  aria-hidden="true"
+>
+  <div
+    class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable"
+  >
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Comparación de Coniciliaciones</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+          style="color: red"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-8">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <th scope="col">Cálculos Total Play</th>
+                    <th scope="col">Cálculos Cacao</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Cálculo promedio periodo</th>
+                    <td>670</td>
+                    <td>630</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Saldo acumulado</th>
+                    <td>680</td>
+                    <td>620</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Interés ordinario</th>
+                    <td>690</td>
+                    <td>610</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Saldo deudor cacao</th>
+                    <td>700</td>
+                    <td>605</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Cerrar
+        </button>
       </div>
     </div>
   </div>
